@@ -1,0 +1,19 @@
+{% extends 'basic\main.html' %}
+
+{% load static %}
+
+{% block nav %}
+    <div class="px-5 py-3 d-flex justify-content-between align-items-center shadow-sm">
+        <div class="logo-container" style="width: 70px;">
+            <img src="{% static 'images/logoodc.png' %}"alt="" class="w-100"">
+        </div>
+
+            <div class="button-container d-flex justify-content-between align-items-center">
+                <a href="{% url 'blogtitle' %}" class="ml-4 btn1">Blog</a>
+                <a href="{% url 'userSignup' %}"class="ml-4 btn1">Sign up</a>
+                <a href="{% url 'login' %}" class="ml-4 btn1">Login</a>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

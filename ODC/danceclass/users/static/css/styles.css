@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+p, ul, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+    background-color: #011312eb;
+}
+
+.app-btn{
+    padding: 8px 18px;
+    background-color: white ;
+    border-radius: 10px;
+    color: black ;
+}
+.btn1{
+    padding: 8px 18px;
+    background-color:white ;
+    border-radius: 10px;
+    color: black  ;
+}
+
+.error-msg{
+    color: #ed1b2e;
+    font-size: 12px;
+    font-weight: 500;
+}
