@@ -1,0 +1,39 @@
+<!-- <h3>login</h3>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <button type="submit">Login</button>
+</form>
+ -->
+ {% block content %}
+ <div class="form-container h-100vh w-100" style=" ">
+     <form method="POST" class="shadow-lg" style="width: 35%;">  
+         {% csrf_token %}  
+         <h3 class="mb-4 text-center" style="color: white;">Welcome Back!</h3>
+         {% if error_msg_unapproved %} <span class="error-msg">{{error_msg_unapproved}}</span> {% endif %} 
+ 
+         <div class="form-group mt-2">
+             
+             <label for="",  style="color: white;">Username {% if error_msg %} <span class="error-msg ml-2">{{error_msg}}</span> {% endif %} </label>
+             <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+         </div>
+ 
+         <div class="form-group">
+             <label for="", style="color: white;">Password {% if error_msg %} <span class="error-msg ml-2">{{error_msg}}</span> {% endif %} </label>
+             <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+         </div>
+     
+         {% comment %} {% if notapproved %}
+         <div>
+           <span style="color:red">Sorry your account has not been approved</span>
+         </div>
+         {% endif %} {% endcomment %}
+     
+         <button type="submit">Login</button>  
+     </form>  
+ </div>
+ {% endblock %}
+ 
