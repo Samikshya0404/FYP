@@ -1,0 +1,30 @@
+.title {
+    margin: 20px 0px;
+}
+
+.title p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.event-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #F7F5EB;
+    padding: 20px 15px;
+    margin: 10px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.event-list p {
+    margin: 0;
+    padding: 0;
+}
+.event-title {
+    font-weight: bold;
+}
+
+.event-des {
+    font-size: 12px;
+}

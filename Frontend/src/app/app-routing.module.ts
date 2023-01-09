@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { EventsComponent } from './events/events.component';
 import { HiphopComponent } from './hiphop/hiphop.component';
 import { HomeComponent } from './home/home.component';
@@ -29,7 +30,10 @@ const routes: Routes = [
     path:'blog',
     component:BlogComponent
   },
-
+  {
+    path:'blog-details',
+    component:BlogdetailsComponent
+  },
   {
     path: 'styles',
     component:StylesComponent

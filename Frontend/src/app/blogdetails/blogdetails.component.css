@@ -1,0 +1,22 @@
+.blog-title {
+    margin: 15px 0px;
+}
+
+.blog-title p {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.date p {
+    color: aquamarine;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.blog-details p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}

@@ -17,6 +17,7 @@ import { HiphopComponent } from './hiphop/hiphop.component';
 import { PoppingComponent } from './popping/popping.component';
 import { HouseComponent } from './house/house.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
+import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WorkoutsComponent } from './workouts/workouts.component';
     HiphopComponent,
     PoppingComponent,
     HouseComponent,
-    WorkoutsComponent
+    WorkoutsComponent,
+    BlogdetailsComponent
   ],
   imports: [
     BrowserModule,
