@@ -1,36 +1,277 @@
 <div class="login-page">
   <div class="form">
-    <!-- <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
-      </form> -->
-    <form class="login-form">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form">
       <h4>Register</h4>
       <div class="row mt-3">
         <div class="col-md-6">
-          <input type="text" placeholder="First Name" />
-          <input type="password" placeholder="Username" />
-          <select class="form-select" aria-label="Default select example">
+          <div
+            [ngClass]="
+              registerForm.controls.firstname.errors &&
+              (registerForm.controls.firstname.dirty ||
+                registerForm.controls.firstname.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="text"
+              class="form-control"
+              formControlName="firstname"
+              placeholder="First Name"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.firstname.errors &&
+                (registerForm.controls.firstname.dirty ||
+                  registerForm.controls.firstname.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.firstname.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <div
+            [ngClass]="
+              registerForm.controls.username.errors &&
+              (registerForm.controls.username.dirty ||
+                registerForm.controls.username.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="text"
+              formControlName="username"
+              placeholder="Username"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.username.errors &&
+                (registerForm.controls.username.dirty ||
+                  registerForm.controls.username.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.username.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div
+          [ngClass]="
+              registerForm.controls.gender.errors &&
+              (registerForm.controls.gender.dirty ||
+                registerForm.controls.gender.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <select
+            class="form-select"
+            formControlName="gender"
+            aria-label="Default select example"
+          >
             <option value="" disabled selected hidden>Gender</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
             <option value="3">Others</option>
           </select>
-          <input type="text" placeholder="Password" />
+          <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.gender.errors &&
+                (registerForm.controls.gender.dirty ||
+                  registerForm.controls.gender.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.gender.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <div
+            [ngClass]="
+              registerForm.controls.password1.errors &&
+              (registerForm.controls.password1.dirty ||
+                registerForm.controls.password1.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="password"
+              formControlName="password1"
+              placeholder="Password"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.password1.errors &&
+                (registerForm.controls.password1.dirty ||
+                  registerForm.controls.password1.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.password1.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
         </div>
 
         <div class="col-md-6">
-          <input type="text" placeholder="Last Name" />
-          <input type="email" placeholder="Email" />
-          <input type="number" placeholder="Phone number" />
-          <input type="password" placeholder="Confirm Password" />
+          <div
+            [ngClass]="
+              registerForm.controls.lastname.errors &&
+              (registerForm.controls.lastname.dirty ||
+                registerForm.controls.lastname.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="text"
+              formControlName="lastname"
+              placeholder="Last Name"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.lastname.errors &&
+                (registerForm.controls.lastname.dirty ||
+                  registerForm.controls.lastname.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.lastname.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div
+            [ngClass]="
+              registerForm.controls.email.errors &&
+              (registerForm.controls.email.dirty ||
+                registerForm.controls.email.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input type="email" formControlName="email" placeholder="Email" />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.email.errors &&
+                (registerForm.controls.email.dirty ||
+                  registerForm.controls.email.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.email.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <div
+            [ngClass]="
+              registerForm.controls.phone.errors &&
+              (registerForm.controls.phone.dirty ||
+                registerForm.controls.phone.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="number"
+              formControlName="phone"
+              placeholder="Phone number"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.phone.errors &&
+                (registerForm.controls.phone.dirty ||
+                  registerForm.controls.phone.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.phone.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+
+          <div
+            [ngClass]="
+              registerForm.controls.password2.errors &&
+              (registerForm.controls.password2.dirty ||
+                registerForm.controls.password2.touched)
+                ? 'has-error'
+                : ''
+            "
+          >
+            <input
+              type="password"
+              formControlName="password2"
+              placeholder="Confirm Password"
+            />
+            <div
+              id="email-error-msg"
+              class="message"
+              *ngIf="
+                registerForm.controls.password2.errors &&
+                (registerForm.controls.password2.dirty ||
+                  registerForm.controls.password2.touched)
+              "
+            >
+              <ng-container
+                *ngIf="registerForm.controls.password2.errors?.required"
+              >
+                <div id="blank-email-error" class="help-block text-danger">
+                  <p>Required !!</p>
+                </div>
+              </ng-container>
+            </div>
+          </div>
         </div>
       </div>
 
-      <button>Register</button>
+      <button type="submit">Register</button>
       <p class="message">
         Already registered? <a [routerLink]="['/login']">Login</a>
       </p>
