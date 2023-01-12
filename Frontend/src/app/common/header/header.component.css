@@ -52,10 +52,10 @@
     position: fixed;
     right: 15px;
     top: 59px;
-    z-index: 999999;
-    transform-origin: right top;
+    z-index: 99999999999;
+    /* transform-origin: right top; */
     border-radius: 5px;
-    transition: width 0.4s, height 0.4s, transform 0.4s;
+    /* transition: width 0.4s, height 0.4s, transform 0.4s; */
   }
 
   .menu {

@@ -1,11 +1,70 @@
 <div class="login-page">
-    <div class="form">
-        <h4>Login</h4>
-      <form class="login-form mt-3">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
-        <button>login</button>
-        <p class="message">Not registered? <a [routerLink]="['/register']" >Create an account</a></p>
-      </form>
-    </div>
+  <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <h4>Login</h4>
+      <div
+        [ngClass]="
+          loginForm.controls.username.errors &&
+          (loginForm.controls.username.dirty ||
+            loginForm.controls.username.touched ||
+            loginRequest)
+            ? 'has-error'
+            : ''
+        "
+      ></div>
+      <input type="text" placeholder="username" formControlName="username" />
+      <div
+        id="email-error-msg"
+        class="message"
+        *ngIf="
+          loginForm.controls.username.errors &&
+          (loginForm.controls.username.dirty ||
+            loginForm.controls.username.touched ||
+            loginRequest)
+        "
+      >
+        <ng-container *ngIf="loginForm.controls.username.errors?.required">
+          <div id="blank-email-error" class="help-block text-danger">
+            <p>Required !!</p>
+          </div>
+        </ng-container>
+      </div>
+      <div
+        [ngClass]="
+          loginForm.controls.password.errors &&
+          (loginForm.controls.password.dirty ||
+            loginForm.controls.password.touched ||
+            loginRequest)
+            ? 'has-error'
+            : ''
+        "
+      >
+        <input
+          type="password"
+          placeholder="password"
+          formControlName="password"
+        />
+        <div
+          id="email-error-msg"
+          class="message"
+          *ngIf="
+            loginForm.controls.password.errors &&
+            (loginForm.controls.password.dirty ||
+              loginForm.controls.password.touched ||
+              loginRequest)
+          "
+        >
+          <ng-container *ngIf="loginForm.controls.password.errors?.required">
+            <div id="blank-email-error" class="help-block text-danger">
+              <p>Required !!</p>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <button>login</button>
+      <p class="message">
+        Not registered? <a [routerLink]="['/register']">Create an account</a>
+      </p>
+    </form>
   </div>
+</div>

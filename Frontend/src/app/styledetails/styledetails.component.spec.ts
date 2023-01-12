@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PoppingComponent } from './popping.component';
+import { StyledetailsComponent } from './styledetails.component';
 
-describe('PoppingComponent', () => {
-  let component: PoppingComponent;
-  let fixture: ComponentFixture<PoppingComponent>;
+describe('StyledetailsComponent', () => {
+  let component: StyledetailsComponent;
+  let fixture: ComponentFixture<StyledetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PoppingComponent ]
+      declarations: [ StyledetailsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PoppingComponent);
+    fixture = TestBed.createComponent(StyledetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

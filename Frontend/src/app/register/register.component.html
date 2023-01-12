@@ -8,7 +8,8 @@
             [ngClass]="
               registerForm.controls.firstname.errors &&
               (registerForm.controls.firstname.dirty ||
-                registerForm.controls.firstname.touched)
+                registerForm.controls.firstname.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -25,7 +26,8 @@
               *ngIf="
                 registerForm.controls.firstname.errors &&
                 (registerForm.controls.firstname.dirty ||
-                  registerForm.controls.firstname.touched)
+                  registerForm.controls.firstname.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -41,7 +43,8 @@
             [ngClass]="
               registerForm.controls.username.errors &&
               (registerForm.controls.username.dirty ||
-                registerForm.controls.username.touched)
+                registerForm.controls.username.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -57,7 +60,8 @@
               *ngIf="
                 registerForm.controls.username.errors &&
                 (registerForm.controls.username.dirty ||
-                  registerForm.controls.username.touched)
+                  registerForm.controls.username.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -71,31 +75,33 @@
           </div>
 
           <div
-          [ngClass]="
+            [ngClass]="
               registerForm.controls.gender.errors &&
               (registerForm.controls.gender.dirty ||
-                registerForm.controls.gender.touched)
+                registerForm.controls.gender.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
           >
             <select
-            class="form-select"
-            formControlName="gender"
-            aria-label="Default select example"
-          >
-            <option value="" disabled selected hidden>Gender</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Others</option>
-          </select>
-          <div
+              class="form-select"
+              formControlName="gender"
+              aria-label="Default select example"
+            >
+              <option value="" disabled selected hidden>Gender</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Others</option>
+            </select>
+            <div
               id="email-error-msg"
               class="message"
               *ngIf="
                 registerForm.controls.gender.errors &&
                 (registerForm.controls.gender.dirty ||
-                  registerForm.controls.gender.touched)
+                  registerForm.controls.gender.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -111,7 +117,8 @@
             [ngClass]="
               registerForm.controls.password1.errors &&
               (registerForm.controls.password1.dirty ||
-                registerForm.controls.password1.touched)
+                registerForm.controls.password1.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -127,7 +134,8 @@
               *ngIf="
                 registerForm.controls.password1.errors &&
                 (registerForm.controls.password1.dirty ||
-                  registerForm.controls.password1.touched)
+                  registerForm.controls.password1.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -146,7 +154,8 @@
             [ngClass]="
               registerForm.controls.lastname.errors &&
               (registerForm.controls.lastname.dirty ||
-                registerForm.controls.lastname.touched)
+                registerForm.controls.lastname.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -162,7 +171,8 @@
               *ngIf="
                 registerForm.controls.lastname.errors &&
                 (registerForm.controls.lastname.dirty ||
-                  registerForm.controls.lastname.touched)
+                  registerForm.controls.lastname.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -179,7 +189,8 @@
             [ngClass]="
               registerForm.controls.email.errors &&
               (registerForm.controls.email.dirty ||
-                registerForm.controls.email.touched)
+                registerForm.controls.email.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -191,7 +202,8 @@
               *ngIf="
                 registerForm.controls.email.errors &&
                 (registerForm.controls.email.dirty ||
-                  registerForm.controls.email.touched)
+                  registerForm.controls.email.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -207,7 +219,8 @@
             [ngClass]="
               registerForm.controls.phone.errors &&
               (registerForm.controls.phone.dirty ||
-                registerForm.controls.phone.touched)
+                registerForm.controls.phone.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -223,7 +236,8 @@
               *ngIf="
                 registerForm.controls.phone.errors &&
                 (registerForm.controls.phone.dirty ||
-                  registerForm.controls.phone.touched)
+                  registerForm.controls.phone.touched ||
+                  registerRequest)
               "
             >
               <ng-container
@@ -240,7 +254,8 @@
             [ngClass]="
               registerForm.controls.password2.errors &&
               (registerForm.controls.password2.dirty ||
-                registerForm.controls.password2.touched)
+                registerForm.controls.password2.touched ||
+                registerRequest)
                 ? 'has-error'
                 : ''
             "
@@ -256,7 +271,8 @@
               *ngIf="
                 registerForm.controls.password2.errors &&
                 (registerForm.controls.password2.dirty ||
-                  registerForm.controls.password2.touched)
+                  registerForm.controls.password2.touched ||
+                  registerRequest)
               "
             >
               <ng-container

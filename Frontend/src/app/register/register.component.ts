@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class RegisterComponent implements OnInit {
   private ngUnsubscribe: Subject<any> = new Subject();
   registerForm!: FormGroup;
+  registerRequest: boolean = false
 
   constructor(private formbuilder: FormBuilder) {
     this.registerForm = this.formbuilder.group({
@@ -25,7 +26,7 @@ export class RegisterComponent implements OnInit {
       password1: ['', Validators.required],
       gender: ['', Validators.required],
       password2: ['', Validators.required],
-      phone : ['',Validators.required]
+      phone: ['', Validators.required]
     })
   }
 
@@ -34,6 +35,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    this.registerRequest = true
     console.log('submitted !!')
   }
 }

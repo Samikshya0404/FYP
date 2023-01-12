@@ -13,12 +13,11 @@ import { MenuComponent } from './common/menu/menu.component';
 import { StylesComponent } from './styles/styles.component';
 import { AboutComponent } from './about/about.component';
 import { EventsComponent } from './events/events.component';
-import { HiphopComponent } from './hiphop/hiphop.component';
-import { PoppingComponent } from './popping/popping.component';
 import { HouseComponent } from './house/house.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
-
+import { ClickoutsideDirective } from './utilitis/directives/clickoutside.directive';
+import { StyledetailsComponent } from './styledetails/styledetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +31,11 @@ import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
     StylesComponent,
     AboutComponent,
     EventsComponent,
-    HiphopComponent,
-    PoppingComponent,
     HouseComponent,
     WorkoutsComponent,
-    BlogdetailsComponent
+    BlogdetailsComponent,
+    ClickoutsideDirective,
+    StyledetailsComponent
   ],
   imports: [
     BrowserModule,

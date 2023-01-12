@@ -12,4 +12,7 @@ public profile:any = false
 handleProfile(){
   this.profile= !this.profile
 }
+clickedOutside(){
+  this.profile = false
+}
 }

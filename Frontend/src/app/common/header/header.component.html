@@ -1,7 +1,12 @@
 <nav class="navbar navbar-light bg-light header-section">
   <div class="container-fluid">
     <div style="color: #fff">
-      <img [routerLink]="['/']" class="logo" src="../../../assets/logo/logo.png" alt="" />
+      <img
+        [routerLink]="['/']"
+        class="logo"
+        src="../../../assets/logo/logo.png"
+        alt=""
+      />
       <!-- LOGO -->
     </div>
     <div class="right-section">
@@ -18,18 +23,21 @@
           <span class="material-icons" id="search-addon"> search </span>
         </div>
       </div>
-      <div (click)="handleProfile()" class="profile">
-        <span class="material-icons"> account_circle </span>
+      <div clickOutside (clickOutside)="clickedOutside()">
+        <div (click)="handleProfile()" class="profile">
+          <span class="material-icons"> account_circle </span>
+        </div>
       </div>
-      <div *ngIf="profile"  class="profile-dropdown">
+
+      <div *ngIf="profile" class="profile-dropdown">
         <div>
           <div [routerLink]="['/login']" class="menu">
             <div class="menu-item">
               <span class="material-icons"> account_circle </span>
-              <a   class="dropdown-item">Login</a>
+              <a class="dropdown-item">Login</a>
             </div>
           </div>
-          <div  [routerLink]="['/register']" class="menu">
+          <div [routerLink]="['/register']" class="menu">
             <div class="menu-item">
               <span class="material-icons"> account_circle </span>
               <a class="dropdown-item">Signup</a>
@@ -40,5 +48,3 @@
     </div>
   </div>
 </nav>
-
-<app-menu></app-menu>

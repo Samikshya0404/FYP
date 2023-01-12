@@ -1,6 +1,38 @@
 <div class="style">
   <h4>Learn Different dance styles!!</h4>
-  <div class="style-list">
+  <div class="row style-list ">
+    <div class="col-lg-4">
+      <div [routerLink]="['/styledetails']">
+        <div class="style-image" >
+          <img src="../../assets/style.jfif" alt="" />
+        </div>
+        <div>
+          <p>Hiphop</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div [routerLink]="['/styledetails']">
+        <div class="style-image" >
+          <img src="../../assets/style.jfif" alt="" />
+        </div>
+        <div>
+          <p>Popping</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div [routerLink]="['/styledetails']">
+        <div class="style-image">
+          <img src="../../assets/style.jfif" alt="" />
+        </div>
+        <div>
+          <p>House</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="style-list">
     <div [routerLink]="['/hiphop']">
       <div>
         <img src="../../assets/style.jfif" alt="" />
@@ -39,5 +71,5 @@
       </div>
       <div><p>House</p></div>
     </div>
-  </div>
+  </div> -->
 </div>
