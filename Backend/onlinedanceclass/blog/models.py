@@ -4,5 +4,5 @@ from django.db import models
 
 class Blog(models.Model):
     blog_name = models.CharField(max_length=100)
-    blog_dec = models.CharField(max_length=100)
-    event_date = models.CharField(max_length=100)
+    blog_dec = models.TextField()
+    blog_date = models.DateTimeField()
