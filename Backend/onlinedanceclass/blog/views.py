@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from blog.models import Blog
+from blog.serializers import BlogSerializer
 
-# Create your views here.
+
+class EventViewSet(viewsets.ModelViewSet):
+    """
+    A simple ViewSet for viewing and editing accounts.
+    """
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer

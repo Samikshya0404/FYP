@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'events',
     'blog',
     'payment',
-    'rest_framework',
+    'order',
+    'rest_framework'
     
 ]
 

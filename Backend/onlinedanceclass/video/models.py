@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 
 class Style(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
+    thumbnail = models.ImageField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
 LEVEL = (
@@ -27,9 +30,9 @@ class Video(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
 
-
-
 class Comment(models.Model):
     content = models.TextField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     video = models.ForeignKey(Video, on_delete=models.CASCADE)
+
+    

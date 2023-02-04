@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 
 class Event(models.Model):
-    event_name = models.CharField(max_length=100)
-    event_dec = models.TextField()
+    name = models.CharField(max_length=100)
+    decription = models.TextField()
     event_date = models.DateTimeField()
-    event_address = models.CharField(max_length=100)
+    venue = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
