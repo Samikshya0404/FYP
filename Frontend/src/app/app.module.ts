@@ -18,6 +18,7 @@ import { WorkoutsComponent } from './workouts/workouts.component';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { ClickoutsideDirective } from './utilitis/directives/clickoutside.directive';
 import { StyledetailsComponent } from './styledetails/styledetails.component';
+import { PlayerComponent } from './player/player.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { StyledetailsComponent } from './styledetails/styledetails.component';
     WorkoutsComponent,
     BlogdetailsComponent,
     ClickoutsideDirective,
-    StyledetailsComponent
+    StyledetailsComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

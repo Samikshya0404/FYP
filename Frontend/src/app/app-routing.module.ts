@@ -11,7 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { StyledetailsComponent } from './styledetails/styledetails.component';
 import { StylesComponent } from './styles/styles.component';
 import { WorkoutsComponent } from './workouts/workouts.component';
-
+import { PlayerComponent } from './player/player.component';
 const routes: Routes = [
   {
     path: '',
@@ -59,6 +59,10 @@ const routes: Routes = [
   {
     path: 'workouts',
     component: WorkoutsComponent
+  },
+  {
+    path: 'watch',
+    component: PlayerComponent
   }
 ];
 
