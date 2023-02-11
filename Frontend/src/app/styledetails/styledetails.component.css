@@ -1,0 +1,78 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+.home-styles {
+  padding-top: 10px;
+  font-size: 12px;
+}
+.filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.level p {
+  font-weight: bold;
+}
+.filter div {
+  margin-left: 10px;
+}
+.style h4 {
+  padding: 10px 0px;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+}
+/* .style-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+.style-list img {
+  border-radius: 10px;
+  width: 100%;
+}
+.style p a {
+  text-decoration: none;
+  color: #000;
+}
+.style-list div {
+  cursor: pointer;
+}
+.style-list p {
+  /* text-align: center; */
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-top: 5px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.description p {
+  font-weight: normal !important;
+  justify-items: center;
+}
+.preview {
+  text-align: center;
+  margin: 5px 0px;
+}
+.preview button {
+  /* width: 50%; */
+  border-radius: 1px !important;
+  background-color: #464646;
+  color: #fff;
+}
+
+.watch {
+  text-align: center;
+}
+.watch button {
+  width: 50%;
+  border-radius: 1px !important;
+  background-color: #000;
+  color: #fff;
+}

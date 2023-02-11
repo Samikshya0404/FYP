@@ -1,0 +1,13 @@
+.video-section {
+  margin-top: 15px;
+}
+
+.video-section video {
+  width: 100%;
+}
+.video-title {
+  margin: 15px 0px;
+}
+.video-title h6{
+  font-weight: bold;
+}

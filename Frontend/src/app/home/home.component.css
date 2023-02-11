@@ -1,0 +1,25 @@
+.introduction{
+  position: relative;
+}
+.title {
+  position: absolute;
+  top:50%;
+  left: 20%;
+}
+.title h4 {
+  font-size:bold !important ;
+
+}
+.introduction .image img {
+  width: 100%;
+  height: 700px;
+}
+
+.about-section {
+  padding: 20px 0px;
+
+}
+.about-section h4 {
+  text-align: center;
+  font-weight: bold
+}
