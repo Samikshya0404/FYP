@@ -6,12 +6,12 @@ class VideoSerializer(ModelSerializer):
         model = Video
         fields = "__all__"
 
-class StytleSerializer(ModelSerializer):
+class StyleSerializer(ModelSerializer):
     class Meta:
         model = Style
         fields = "__all__"
 
-class CommnetSerializer(ModelSerializer):
+class CommentSerializer(ModelSerializer):
     class Meta:
         model = Comment
         fields = "__all__"
