@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-m(ylcn&hh-#*iknu-$gs(47kpaiq8=)2qrj@#whmxrk9myzzhz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["*"]
+CORS_ALLOW_HEADERS = ['*']
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000"
+]
+
 
 AUTH_USER_MODEL = 'user.CustomUser'
 
@@ -42,6 +51,7 @@ INSTALLED_APPS = [
     'user',
     'video',
     'events',
+    'popularevents',
     'blog',
     'payment',
     'order',
@@ -139,7 +149,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'user.CustomUser'
-AUTHENTICATION_BACKENDS = ['user.CustomAuthBackend', 'django.contrib.auth.backends.ModelBackend']
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 
 
 REST_FRAMEWORK = {

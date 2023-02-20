@@ -25,5 +25,12 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('order/', include('order.urls')),
     path('blog/', include('blog.urls')),
-    path('event/', include('events.urls'))
+    path('event/', include('events.urls')),
+
+
+    #api
+    path('api/blogs/', include('blog.api.urls')),
+    path('api/events/', include('popularevents.api.urls')),
+
+
 ]

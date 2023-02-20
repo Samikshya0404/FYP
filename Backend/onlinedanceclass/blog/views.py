@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .models import Blog
-from .serializers import BlogSerializer
+from .api.serializers import BlogSerializer
 from rest_framework import permissions
 
 # class BlogList(generics.ListCreateAPIView):
