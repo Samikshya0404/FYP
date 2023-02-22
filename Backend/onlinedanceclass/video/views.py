@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from user.models import CustomUser
 from video.models import Video, Style, Comment
-from video.serializers import VideoSerializer, StyleSerializer, CommentSerializer
+from video.api.serializers import VideoSerializer, StyleSerializer, CommentSerializer
 
 # class VideoList(generics.ListCreateAPIView):
 #     queryset = Video.objects.all()

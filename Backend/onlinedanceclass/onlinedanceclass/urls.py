@@ -18,7 +18,12 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from user import views
 from user import views as user_views
-
+from django.conf.urls.static import static
+from django.conf import settings
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('video/', include('video.urls')),
@@ -31,6 +36,13 @@ urlpatterns = [
     #api
     path('api/blogs/', include('blog.api.urls')),
     path('api/events/', include('popularevents.api.urls')),
+    path('api/',include('style.api.urls')),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/auth/', include('user.api.urls')),
 
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
