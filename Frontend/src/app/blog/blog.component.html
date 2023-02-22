@@ -1,70 +1,22 @@
 <div class="blog">
   <h4>Latest News</h4>
   <div class="row">
-    <div class="col-lg-4">
-      <div class="blog-list" [routerLink]="['/blog-details']">
+    <div *ngFor="let blog of data" class="col-lg-4">
+      <div  >
+      <div class="blog-list" [routerLink]="['/blog-details' , blog.id]">
         <div class="blog-image">
-          <img src="../../assets/style.jfif" alt="" />
+          <img
+          src="{{ 'http://localhost:8000' + blog.thumbnail }}"
+          alt="" />
         </div>
         <div class="title">
-          <p>Why Every Dance class should take a begineer class.</p>
+          <p>{{blog.title}}</p>
         </div>
         <div class="date">
-          <span>2023/04/04</span>
+          <span>{{blog.created_at | date }}</span>
         </div>
       </div>
     </div>
-    <div class="col-lg-4">
-      <div class="blog-list" [routerLink]="['/blog-details']">
-        <div class="blog-image">
-          <img src="../../assets/style.jfif" alt="" />
-        </div>
-        <div class="title">
-          <p>Why Every Dance class should take a begineer class.</p>
-        </div>
-        <div class="date">
-          <span>2023/04/04</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div class="blog-list" [routerLink]="['/blog-details']">
-        <div class="blog-image">
-          <img src="../../assets/style.jfif" alt="" />
-        </div>
-        <div class="title">
-          <p>Why Every Dance class should take a begineer class.</p>
-        </div>
-        <div class="date">
-          <span>2023/04/04</span>
-        </div>
-      </div>
     </div>
   </div>
-  <!-- <div class="blog-list">
-    <div>
-      <div>
-        <img src="../../assets/style.jfif" alt="" />
-      </div>
-      <div>
-        <p>Why Every Dance class should take a begineer class.</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img src="../../assets/style.jfif" alt="" />
-      </div>
-      <div>
-        <p>How to take online dance class?</p>
-      </div>
-    </div>
-    <div>
-      <div>
-        <img src="../../assets/style.jfif" alt="" />
-      </div>
-      <div>
-        <p>Team Samikshya Dance Interview.</p>
-      </div>
-    </div>
-  </div> -->
 </div>

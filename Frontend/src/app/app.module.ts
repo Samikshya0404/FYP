@@ -19,6 +19,7 @@ import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { ClickoutsideDirective } from './utilitis/directives/clickoutside.directive';
 import { StyledetailsComponent } from './styledetails/styledetails.component';
 import { PlayerComponent } from './player/player.component';
+import { HttpClientModule ,HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { PlayerComponent } from './player/player.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

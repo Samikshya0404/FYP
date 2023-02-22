@@ -3,49 +3,20 @@
     <p>Upcoming Events</p>
   </div>
 
-  <div class="event-list">
+  <div *ngFor="let data of eventdata"  class="event-list">
     <div class="event">
-      <p class="event-title">Dance Class from Samikshya</p>
+      <p class="event-title">{{data.name}}</p>
       <p class="event-des">
-        Online dance class from samikshya coming next saturday
+       {{data.description}}
       </p>
     </div>
     <div class="organizer">
       <p>Online Dance Class</p>
     </div>
     <div class="date">
-      <p><strong>Date:</strong> 2023/01/09</p>
-      <p><strong>Venue:</strong> Gongabu</p>
+      <p><strong>Date:</strong> {{data.event_date | date}} </p>
+      <p><strong>Venue:</strong> {{data.venue}}</p>
     </div>
   </div>
-  <div class="event-list">
-    <div class="event">
-      <p class="event-title">Dance Class from Samikshya</p>
-      <p class="event-des">
-        Online dance class from samikshya coming next saturday
-      </p>
-    </div>
-    <div class="organizer">
-      <p>Online Dance Class</p>
-    </div>
-    <div class="date">
-      <p><strong>Date:</strong> 2023/01/09</p>
-      <p><strong>Venue:</strong> Gongabu</p>
-    </div>
-  </div>
-  <div class="event-list">
-    <div class="event">
-      <p class="event-title">Dance Class from Samikshya</p>
-      <p class="event-des">
-        Online dance class from samikshya coming next saturday
-      </p>
-    </div>
-    <div class="organizer">
-      <p>Online Dance Class</p>
-    </div>
-    <div class="date">
-      <p><strong>Date:</strong> 2023/01/09</p>
-      <p><strong>Venue:</strong> Gongabu</p>
-    </div>
-  </div>
+
 </div>
