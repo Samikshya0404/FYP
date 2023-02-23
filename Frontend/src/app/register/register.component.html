@@ -282,6 +282,9 @@
                   <p>Required !!</p>
                 </div>
               </ng-container>
+              <ng-container *ngIf="registerForm.controls.password2.errors?.passwordMatch">
+                <div class="help-block text-danger mt-1">Password do not match</div>
+            </ng-container>
             </div>
           </div>
         </div>

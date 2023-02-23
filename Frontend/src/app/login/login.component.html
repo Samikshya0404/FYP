@@ -4,30 +4,35 @@
       <h4>Login</h4>
       <div
         [ngClass]="
-          loginForm.controls.username.errors &&
-          (loginForm.controls.username.dirty ||
-            loginForm.controls.username.touched ||
+          loginForm.controls.email.errors &&
+          (loginForm.controls.email.dirty ||
+            loginForm.controls.email.touched ||
             loginRequest)
             ? 'has-error'
             : ''
         "
-      ></div>
-      <input type="text" placeholder="username" formControlName="username" />
-      <div
-        id="email-error-msg"
-        class="message"
-        *ngIf="
-          loginForm.controls.username.errors &&
-          (loginForm.controls.username.dirty ||
-            loginForm.controls.username.touched ||
-            loginRequest)
-        "
       >
-        <ng-container *ngIf="loginForm.controls.username.errors?.required">
-          <div id="blank-email-error" class="help-block text-danger">
-            <p>Required !!</p>
-          </div>
-        </ng-container>
+        <input
+          type="email"
+          placeholder=" Enter your Email"
+          formControlName="email"
+        />
+        <div
+          id="email-error-msg"
+          class="message"
+          *ngIf="
+            loginForm.controls.email.errors &&
+            (loginForm.controls.email.dirty ||
+              loginForm.controls.email.touched ||
+              loginRequest)
+          "
+        >
+          <ng-container *ngIf="loginForm.controls.email.errors?.required">
+            <div id="blank-email-error" class="help-block text-danger">
+              <p>Required !!</p>
+            </div>
+          </ng-container>
+        </div>
       </div>
       <div
         [ngClass]="
