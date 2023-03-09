@@ -14,7 +14,9 @@ export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
   registerRequest: boolean = false
 
-  constructor(private formbuilder: FormBuilder , private auth: AuthService ,private route : Router ) {
+  constructor(private formbuilder: FormBuilder ,
+     private auth: AuthService ,
+     private route : Router ) {
     this.registerForm = this.formbuilder.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],

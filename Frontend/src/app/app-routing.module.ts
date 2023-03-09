@@ -1,3 +1,4 @@
+import { GuardsService } from './utilitis/directives/guard/guard.service';
 import { style } from '@angular/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -62,7 +63,8 @@ const routes: Routes = [
   },
   {
     path: 'watch',
-    component: PlayerComponent
+    component: PlayerComponent,
+    canActivate: [GuardsService]
   }
 ];
 

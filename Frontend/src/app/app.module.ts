@@ -20,6 +20,11 @@ import { ClickoutsideDirective } from './utilitis/directives/clickoutside.direct
 import { StyledetailsComponent } from './styledetails/styledetails.component';
 import { PlayerComponent } from './player/player.component';
 import { HttpClientModule ,HttpClient } from '@angular/common/http';
+// import { ToastrModule } from 'ngx-toastr';
+import { GuardsService } from './utilitis/directives/guard/guard.service';
+import { NotifierModule } from 'angular-notifier';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,9 +50,20 @@ import { HttpClientModule ,HttpClient } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NotifierModule,
+    // ToastrModule.forRoot({
+    //   timeOut:3000,
+    //   preventDuplicates: true,
+    //   closeButton: true,
+    //   positionClass:'toast-bottom-right'
+    // }), // ToastrModule added
   ],
-  providers: [],
+  providers: [GuardsService],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
