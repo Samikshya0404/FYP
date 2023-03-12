@@ -18,3 +18,13 @@ class StyleListAPI(generics.GenericAPIView):
         styles = Style.objects.all()
         serializer = StyleSerializer(styles, many=True)
         return Response( {"data": serializer.data})
+
+class StyleRetrieveAPI(generics.RetrieveAPIView):
+    throttle_classes = [UserRateThrottle]
+    permission_classes = [AllowAny]
+    models = Style
+    queryset = Style.objects.all()
+    serializer_class = StyleSerializer
+    lookup_field = "name"
+
+   
